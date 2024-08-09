@@ -25,6 +25,7 @@ function playSong() {
 	playBtn.querySelector("i.fa").classList.remove("fa-play");
 	playBtn.querySelector("i.fa").classList.add("fa-pause");
 	audio.play();
+	updateBackground();
 }
 // Pause Song  
 function pauseSong() {
@@ -41,6 +42,7 @@ function prevSong() {
 	}
 	loadSong(songs[songIndex]);
 	playSong();
+	updateBackground();
 }
 // Next Song  
 function nextSong() {
@@ -50,6 +52,7 @@ function nextSong() {
 	}
 	loadSong(songs[songIndex]);
 	playSong();
+	updateBackground();
 }
 // Update Progress bar  
 function updateProgress(e) {
@@ -82,3 +85,42 @@ audio.addEventListener("timeupdate", updateProgress);
 progressContainer.addEventListener("click", setProgress);
 // Song End  
 audio.addEventListener("ended", nextSong);  
+//Background Fade
+const imgElement = document.getElementById('cover');
+const body = document.body;
+const colorThief = new ColorThief();
+
+function darkenColor(color, factor) {
+	return color.map(value => Math.max(0, Math.floor(value * (1 - factor))));
+}
+
+function updateBackground() {
+	// Asegúrate de que la imagen esté completamente cargada
+	if (imgElement.complete) {
+		const palette = colorThief.getPalette(imgElement);
+		var shadow = palette[3]
+		var info = palette[7]
+		var color = palette[6]
+
+		body.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+		const shadowColor = `rgba(${shadow[0]}, ${shadow[1]}, ${shadow[2]}, 0.5)`;
+		musicContainer.style.backgroundColor = `rgb(${info[0]}, ${info[1]}, ${info[2]})`;
+		musicContainer.style.boxShadow = `0 20px 20px 0 ${shadowColor}`;
+
+	} else {
+		imgElement.addEventListener('load', function () {
+			const palette = colorThief.getPalette(imgElement);
+			var shadow = palette[3]
+			var info = palette[7]
+			var color = palette[6]
+
+			body.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+			const shadowColor = `rgba(${shadow[0]}, ${shadow[1]}, ${shadow[2]}, 0.5)`;
+			musicContainer.style.backgroundColor = `rgb(${info[0]}, ${info[1]}, ${info[2]})`;
+			musicContainer.style.boxShadow = `0 20px 20px 0 ${shadowColor}`;
+		});
+	}
+}
+
+// Inicializar el fondo basado en la imagen actual
+
