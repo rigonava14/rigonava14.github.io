@@ -80,12 +80,12 @@ body {
 	font-size: 20px;
 	cursor: pointer;
 	padding: 10px;
-	margin: 0 20px;
+	margin: 0 10px;
 }
 
 .action-btn.action-btn-big {
 	color: #ffffff;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .music-info {
