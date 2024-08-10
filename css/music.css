@@ -30,7 +30,7 @@ body {
 }
 
 .img-container{
-	margin-top: 50%;
+	margin-top: 10%;
 }
 
 .img-container img {
@@ -45,9 +45,15 @@ body {
 .music-info {
 	margin-top: 20px;
 	text-align: center;
-	color: #B3B3B3;
+	color: #ffffff;
 	width: 90%;
 	/* Texto secundario en gris claro */
+}
+
+.music-info p {
+	color: #ffffff;
+	margin-top: 5px;
+	font-size: 14px;
 }
 
 .music-info h4 {

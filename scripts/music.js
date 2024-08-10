@@ -8,16 +8,58 @@ const progressContainer = document.getElementById("progress-container");
 const title = document.getElementById("title");
 const cover = document.getElementById("cover");
 // Songs Titles  
-const songs = ["M.A.I", "Sanctuary", "ukulele"];
+const songs = [
+	{
+		title: "M.A.I - Milo J",
+		description: "Esta cancion literalmente tiene tu nombre, cada frase, cada nota, todo me hace pensar en ti."
+	},
+	{
+		title: "Sanctuary - Joji",
+		description: "Dijiste que las canciones de Joji no se dedican, sin embargo, esta fue la primera que me dedicaste."
+	},
+	{
+		title: "Work Song - Hozier",
+		description: "Esta fué de las primeras canciones que me mostraste, y cada que la escucho te recuerdo."
+	},
+	{
+		title: "BIRDS OF A FEATHER - Billie Eilish",
+		description: "Te encanta Billie y esta cancion siempre la pones en el carro, siempre que la veo te recuerdo."
+	},
+	{
+		title: "COMO RESPIRAR - Humbe",
+		description: "Como no recordarte con esta canción si me la cantabas mientras manejaba, es tan lindo escucharte."
+	},
+	{
+		title: "Everybody Wants To Rule The World - Tears For Fears",
+		description: "No se me olvida, tu cancion favorita <3."
+	},	
+	{
+		title: "Good Luck Babe - Chappell Roan",
+		description: "Siempre la pones en el carro, en cuanto la escucho tu rostro cantandola viene a mi mente."
+	},
+	{
+		title: "Moonligth - Dhruv",
+		description: "La primer cancion que me dedicaste, nuestra canción <3."
+	},
+	{
+		title: "Todo Cambió - Camila",
+		description: "Cada que la escucho recuerdo ese TikTok que me hiciste, es demasiado lindo y te ves hermosa cantando en el."
+	},
+	{
+		title: "Worldwide - Big Time Rush",
+		description: "Recuerdo que la escuchaba mucho cuando estabamos lejos, cuendo estabas en Phoenix y ahora que estamos lejos la estoy volviendo a escuchar, no importa la distancia, te amo con toda mi vida, espero te guste esto <3."
+	}
+];
 // KeepTrack of song  
 let songIndex = 0;
 // Initially load song details into DOM  
 loadSong(songs[songIndex]);
 // Update song details  
 function loadSong(song) {
-	title.innerText = song;
-	audio.src = `./music/${song}.mp3`;
-	cover.src = `./images/${song}.jpg`;
+	title.innerText = song.title;
+	description.innerText = song.description; 
+	audio.src = `./music/${song.title}.mp3`;
+	cover.src = `./images/${song.title}.jpg`;
 }
 // Play Song  
 function playSong() {
