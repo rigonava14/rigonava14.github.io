@@ -86,7 +86,11 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: right;
-	height: 100%;
+	height: calc(100% - 50px);
+	/* Adjust based on navbar height */
+	overflow-y: auto;
+	/* Enable vertical scrolling */
+
 }
 
 h1 {
