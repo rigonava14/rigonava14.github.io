@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    text-align: center;
+    background: #BBEEDB;
+    color: #356F66;
+}
+
+canvas {
+    display: block;
+    margin: 0px auto 8px;
+    cursor: move;
+    background: #BBEEDB;
+}
+
+#container {
+    margin-bottom: 8px;
+}
+
+.btn {
+    height: 30px;
+    width: 60px;
+    background: none;
+    border-color: #356F66;
+    border-radius: 10px;
+    color: #356F66;
+}
+
+.btn:focus {
+    background: #356F66;
+    color: #BBEEDB;
+}

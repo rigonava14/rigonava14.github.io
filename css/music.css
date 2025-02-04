@@ -1,0 +1,104 @@
+body {
+	
+	/* Fondo oscuro */
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	/* Fuente minimalista */
+	color: #FFFFFF;
+	/* Texto blanco */
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background 0.5s ease-in-out;
+}
+
+.music-container {
+	background-color: #181818;
+	/* Fondo del contenedor oscuro */
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+	/* Sombras sutiles */
+	display: flex;
+	padding: 20px;
+	flex-direction: column;
+	align-items: center;
+	width: 70%;
+	height: 70%;
+	transition: background 0.5s ease-in-out;
+}
+
+.img-container{
+	margin-top: 10%;
+}
+
+.img-container img {
+	border-radius: 5px;
+	object-fit: cover;
+	width: 250;
+	height: 250px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	/* Sombra para darle profundidad a la imagen */
+}
+
+.music-info {
+	margin-top: 20px;
+	text-align: center;
+	color: #ffffff;
+	width: 90%;
+	/* Texto secundario en gris claro */
+}
+
+.music-info p {
+	color: #ffffff;
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.music-info h4 {
+	color: #FFFFFF;
+	/* Título en blanco */
+	font-weight: 600;
+	
+}
+
+.action-btn {
+	background-color: transparent;
+	/* Fondo transparente */
+	border: none;
+	color: #ffffff;
+	/* Color de iconos */
+	font-size: 24px;
+	cursor: pointer;
+	margin: 10px;
+	transition: color 0.3s;
+}
+
+.action-btn:hover {
+	color: #FFFFFF;
+	/* Color blanco al pasar el ratón */
+}
+
+.action-btn.action-btn-big {
+	color: #ffffff;
+	/* Botón de acción grande en verde Spotify */
+	font-size: 32px;
+}
+
+.progress-container {
+	background-color: #535353;
+	/* Fondo de la barra de progreso */
+	border-radius: 4px;
+	margin: 20px 0;
+	width: 100%;
+	height: 4px;
+}
+
+.progress {
+	background-color: #ef4d4d;
+	/* Barra de progreso en verde Spotify */
+	height: 100%;
+	width: 90%;
+	border-radius: 4px;
+}
